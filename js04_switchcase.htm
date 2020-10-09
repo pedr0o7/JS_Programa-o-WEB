@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>js04_switchcase.htm - selecao multipla</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8"/>
+</head>
+<body>
+
+
+<form name="formcalend" action=" " method="post">
+digite o Més (01 a 12):  
+<input type="text" name="f_mes" size="4" maxlength="2" /><p></p>
+<input type="button" name="bnt_processar" value="Processar" onclick="verificames()"  />
+<input type="reset" name="btn_cancelar" value="cancelar" /><p></p>
+O Més correspondente é:
+<input type="text" name="f_nomemes" size="18" maxlength="15" />
+</form>
+
+
+<script language="JavaScript">
+
+var js_mes;
+
+function verificames(){
+	
+	js_mes = parseInt(document.formcalend.f_mes.value);
+
+	switch(js_mes){
+		case 1 : document.formcalend.f_nomemes.value = 'janeiro'; break;
+		case 2 : document.formcalend.f_nomemes.value = 'fevereiro'; break;
+		case 3 : document.formcalend.f_nomemes.value = 'marco'; break;
+		case 4 : document.formcalend.f_nomemes.value = 'abril'; break;
+		case 5 : document.formcalend.f_nomemes.value = 'maio'; break;
+		case 6 : document.formcalend.f_nomemes.value = 'junho'; break;
+		case 7 : document.formcalend.f_nomemes.value = 'julho'; break;
+		case 8 : document.formcalend.f_nomemes.value = 'agosto'; break;
+		case 9 : document.formcalend.f_nomemes.value = 'setembro'; break;
+		case 10 : document.formcalend.f_nomemes.value = 'outubro'; break;
+		case 11 : document.formcalend.f_nomemes.value = 'novembro'; break;
+		case 12 : document.formcalend.f_nomemes.value = 'dezembro'; break;
+		default : document.formcalend.f_nomemes.value = '** Més Inválido! **'; break;
+
+	}
+
+}
+
+
+</script>
+</body>
+</html> 
